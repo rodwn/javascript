@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>javascript test</title>
+</head>
+<body>
+    <button type="button" onclick="distinguish();" style="margin: 50px;">양수,음수 구분</button><br />
+    <button type="button" onclick="distinguish2();" style="margin: 50px;">짝수, 홀수 구분</button><br / />
+    <button type="button" onclick="distinguish3();" style="margin: 50px;">수우미양가 구분</button><br / />
+    <script>
+        function distinguish () {
+            var inputValue = Number(prompt("숫자만 입력하세요","문자는 안돼용"));
+
+            if (inputValue < 0) {
+                alert("숫자 " + inputValue + " 은(는)" + " 음수");
+            } else if (inputValue == 0) {
+                alert("숫자 " + inputValue + " 은(는)" + " 0");
+            } else {
+                alert("숫자 " + inputValue + " 은(는)" + " 양수");
+            }
+        }
+        function distinguish2 () {
+            var inputValue = Number(prompt("숫자만 입력하세요","문자는 안돼용"));
+
+            (inputValue % 2 == 0) ? alert("숫자 " + inputValue + " 은(는)" + " 짝수당") : alert("숫자 " + inputValue + " 은(는)" + " 홀수당");
+        }
+        function distinguish3 () {
+            var nationalLanguage = Number(prompt("국어 점수 입력"));
+            var english = Number(prompt("영어 점수 입력"));
+            var math = Number(prompt("수학 점수 입력"));
+            var avgScore = Math.floor((nationalLanguage + english + math) / 3);
+
+            if (avgScore >= 90) {
+                alert("평균 " + avgScore + " 점!" +" 수");
+            } else if (avgScore >= 80) {
+                alert("평균 " + avgScore + " 점!" +" 우");
+            } else if (avgScore >= 70) {
+                alert("평균 " + avgScore + " 점!" +" 미");
+            } else if (avgScore >= 60) {
+                alert("평균 " + avgScore + " 점!" +" 양");
+            } else {
+                alert("평균 " + avgScore + " 점!" +" 가");
+            }
+        }
+    </script>
+</body>
+</html>
